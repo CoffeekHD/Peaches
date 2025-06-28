@@ -1,0 +1,20 @@
+.info {
+    display: flex;
+    justify-content: center;
+    margin: 38px 0;
+
+    &__text {
+        font-family: var(--Monopolix-Rounded-Medium);
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 150%;
+        letter-spacing: 0.04em;
+        color: var(--black-90);
+        max-width: 411px;
+        text-align: center;
+
+        @include tablet {
+            font-size: 16px;
+        }
+    }
+}

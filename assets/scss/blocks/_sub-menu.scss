@@ -1,0 +1,39 @@
+.sub-menu {
+    position: absolute;
+    background-color: #fff;
+    padding: 60px 80px;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 42px;
+    column-gap: 70px;
+    top: 185%;
+
+    @include laptop {
+        top: -165%;
+        left: 142%;
+        grid-template-columns: 1fr;
+        padding: 40px 40px;
+        overflow-y: scroll;
+    }
+
+    @include mobile {
+        padding: 40px 20px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 12px;
+    }
+
+    &__link {
+        font-family: var(--Lato);
+        font-size: 13px;
+        line-height: 150%;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        text-align: center;
+        color: var(--black-70);
+    }
+}

@@ -1,0 +1,9 @@
+.btn {
+    @include reset-button;
+
+    font-family: var(--Monopolix-Medium);
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--black-90);
+    
+}

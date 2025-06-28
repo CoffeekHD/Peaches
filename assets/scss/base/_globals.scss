@@ -1,0 +1,24 @@
+.active {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 7000;
+    background-color: #fff;
+    filter: invert(0.7);
+    opacity: 0.7;
+}
+
+.hide {
+    display: none;
+}
+
+.old-price {
+    color: var(--black-50);
+}

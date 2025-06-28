@@ -1,0 +1,199 @@
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 9000;
+    &__top {
+        font-family: var(--Monopolix-light);
+        font-weight: 300;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        column-gap: 10px;
+        padding: 10px 30px;
+        line-height: 130%;
+        letter-spacing: 0.06em;
+        color: var(--black-10);
+        background: var(--black-90);
+        text-align: center;
+    
+        &-text {
+            font-size: 16px;
+            text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+            @include mobile {
+                font-size: 14px;
+            }
+        }
+
+        &-link {
+            font-size: 12px;
+            letter-spacing: 0.08em;
+            text-decoration: underline;
+            text-decoration-skip-ink: none;
+        }
+    }
+
+    
+    &__bottom {
+        font-family: var(--Monopolix-Medium);
+        font-weight: 500;
+        background-color: #fff;
+        padding: 24px 0 24px;
+
+        @include laptop {
+            position: relative;
+            z-index: 8000;
+        }
+    }
+
+    &__logo {
+        flex-shrink: 0;
+
+        @include laptop {
+            position: relative;
+            z-index: 8000;
+        }
+    }
+
+    &__content-wrapper {
+        display: flex;
+        column-gap: 25px;
+        align-items: center;
+    }
+
+    &__menu-icon {
+        position: relative;
+        display: none;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+        z-index: 8000;
+
+        span {
+            position: absolute;
+            top: 45%;
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: var(--black-90);
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0%;
+            width: 100%;
+            height: 3px;
+            background-color: var(--black-90);
+            transition: var(--transition);
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 90%;
+            width: 70%;
+            height: 3px;
+            background-color: var(--black-90);
+            transition: var(--transition);
+        }
+
+        @include laptop {
+            display: block;
+        }
+    }
+
+    &__menu-icon.active {
+        span {
+            display: none;
+        }
+        
+        &::before {
+            top: 45%;
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            width: 100%;
+            top: 45%;
+            transform: rotate(-45deg);
+        }
+
+    }
+
+    &__nav {
+        position: relative;
+
+        @include laptop {
+            position: static;
+        }
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__search-container {
+        position: absolute;
+        top: 103%;
+        width: 100%;
+        left: 0;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 8000;
+        border: 1px solid var(--black-90);
+        transition: var(--transition);
+    }
+
+    &__search-container.active {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &__search-wrapper {
+        position: relative;
+    }
+
+    &__search-input {
+        display: block;
+        width: 100%;
+        height: 40px;
+        padding-left: 30px;
+        padding-right: 70px;
+        font-size: 20px;
+    }
+
+    &__search-close {
+        position: absolute;
+        top: 5px;
+        right: 30px;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+
+        &::before {
+            content: "";
+            position: relative;
+            top: 46%;
+            display: block;
+            width: 100%;
+            height: 3px;
+            transform: rotate(45deg);
+            background-color: var(--black-90);
+        }
+
+        &::after {
+            content: "";
+            position: relative;
+            top: 34%;
+            display: block;
+            width: 100%;
+            height: 3px;
+            transform: rotate(-45deg);
+            background-color: var(--black-90);
+        }
+    }
+}

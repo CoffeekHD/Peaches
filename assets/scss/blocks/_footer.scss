@@ -1,0 +1,180 @@
+.footer {
+    margin-top: 140px;
+    padding-top: 120px;
+    background: var(--black-10);
+
+    @include tablet {
+        margin-top: 70px;
+        padding-top: 60px;
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: var(--black-90);
+        margin-bottom: 88px;
+
+        @include tablet {
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        @include mobile {
+            align-items: center;
+        }
+
+        &-form-container {
+            width: 301px;
+
+            @include laptop {
+                width: 250px;
+            }
+
+            @include tablet {
+                width: 301px;
+            }
+
+            @include mobile {
+                width: 280px;
+            }
+        }
+        
+        &-form {
+            position: relative;
+            border-bottom: 1px solid var(--black-30);
+        }
+
+        &-form-text {
+            font-family: var(--Monopolix-Bold);
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 143%;
+            letter-spacing: 0.07em;
+            margin-bottom: 14px;
+
+            @include mobile {
+                text-align: center;
+            }
+        }
+
+        &-form-input {
+            font-family: var(--Lato);
+            background: none;
+            padding-bottom: 8px;
+            width: 100%;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 150%;
+            letter-spacing: 0.06em;
+            padding-right: 40px;
+
+            &::placeholder {
+                color: var(--black-90);
+            }
+        }
+
+        &-form-btn {
+            font-family: var(--Lato-Semibold);
+            position: absolute;
+            right: 0;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 200%;
+            letter-spacing: 0.11em;
+            text-decoration: underline;
+            text-decoration-skip-ink: none;
+            color: var(--black-90);
+        }
+
+        &-lists {
+            display: flex;
+            gap: 95px;
+
+            @include laptop {
+                gap: 40px;
+            }
+
+            @include tablet {
+                flex-wrap: wrap;
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            @include mobile {
+                display: grid;
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        &-list-title {
+            font-family: var(--Monopolix-Bold);
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 150%;
+            letter-spacing: 0.04em;
+
+            @include laptop {
+                font-size: 20px;
+            }
+        }
+
+        &-list-item:not(:last-of-type) {
+            margin-bottom: 12px;
+        }
+
+        &-list-link {
+            font-family: var(--Lato);
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 150%;
+            letter-spacing: 0.06em;
+
+            @include laptop {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include mobile {
+            flex-direction: column;
+            row-gap: 40px;
+        }
+
+        &-social-list {
+            display: flex;
+            gap: 8px;
+        }
+
+        &-links-list {
+            display: flex;
+            gap: 80px;
+            font-family: var(--Lato);
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 130%;
+            letter-spacing: 0.08em;
+            color: var(--black-90);
+
+            @include tablet {
+                gap: 20px;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+            }
+
+            @include mobile {
+                display: grid;
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+    }
+}

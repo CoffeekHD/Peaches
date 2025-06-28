@@ -1,0 +1,12 @@
+.user-menu {
+    display: flex;
+    column-gap: 24px;
+    align-items: center;
+
+    &__item {
+        font-size: 16px;
+        line-height: 143%;
+        letter-spacing: 0.06em;
+        color: var(--black-90);
+    }
+}

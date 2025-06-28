@@ -1,0 +1,72 @@
+.hero {
+    padding-top: 117px;
+    background-image: url('../img/index/backgrounds/hero-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 688px;
+
+    &__slider {
+        @include abs-center;
+
+        font-family: var(--Monopolix-light);
+        text-align: center;
+        color: var(--black-05);
+
+        @include tablet {
+            top: 65%;
+        }
+
+        @include mobile {
+            top: 60%;
+        }
+    }
+
+    &__slide {
+        display: flex !important;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    &__slide-title {
+        font-weight: 400;
+        font-size: clamp(80px, calc(80px + (130 - 80) * ((100vw - 320px) / (1920 - 320))), 130px);
+        line-height: 80%;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+
+        @include laptop {
+            font-size: 80px;
+        }
+
+        @include tablet {
+            font-size: 60px;
+        }
+    }
+
+    &__slide-desc {
+        font-weight: 400;
+        font-size: 64px;
+        line-height: 113%;
+        letter-spacing: 0.02em;
+        text-transform: capitalize;
+
+        @include laptop {
+            font-size: 32px;
+        }
+    }
+
+    &__slide-link {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 200%;
+        letter-spacing: 0.06em;
+        text-transform: capitalize;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+
+        @include laptop {
+            font-size: 16px;
+        }
+    }
+}

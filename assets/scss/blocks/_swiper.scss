@@ -1,0 +1,41 @@
+.hero__slider {
+    height: 300px;
+
+    @include laptop {
+        height: 200px;
+    }
+    
+    @include tablet {
+        height: 400px;
+    }
+}
+
+.swiper-pagination {
+    @include tablet {
+        top: 50% !important;
+    }
+}
+
+.swiper-pagination-bullet {
+    background-color: #AF9484 !important;
+    width: 17px !important;
+    height: 17px !important;
+    opacity: 1 !important;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+    @include tablet {
+        width: 13px !important;
+        height: 13px !important;
+    }
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #2D2D2D !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    &::after {
+        display: none;
+    }
+}

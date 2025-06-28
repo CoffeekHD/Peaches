@@ -1,0 +1,40 @@
+.color {
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    border: 1px solid var(--black-10);
+}
+
+.color-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+
+    &.active {
+        border-radius: 60%;
+        border: 1px solid var(--black-70);
+    }
+}
+
+.color--lightgray {
+    background-color: #E8E6DE;
+}
+
+.color--white {
+    background-color: #fff;
+}
+
+.color--vanilla {
+    background-color: #FBECCF;
+}
+
+.color--brown {
+    background-color: #AF9484;
+}
+
+.color--black {
+    background-color: var(--black-90);
+}

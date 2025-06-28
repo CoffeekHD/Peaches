@@ -1,0 +1,66 @@
+.collections {
+    margin-top: 140px;
+    background-image: url('../img/index/backgrounds/collections-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 690px;
+    
+    @include laptop {
+        background-position: center;
+    }
+
+    @include tablet {
+        margin-top: 70px;
+        background-position: right;
+    }
+
+    @include mobile {
+        background-position: 80%;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        color: var(--black-05);
+        text-transform: capitalize;
+    }
+
+    &__title {
+        font-family: var(--Monopolix-light);
+        font-weight: 400;
+        font-size: 90px;
+        line-height: 113%;
+        letter-spacing: 0.01em;
+
+        @include laptop {
+            font-size: 80px;
+        }
+
+        @include tablet {
+            font-size: 64px;
+        }
+
+        @include mobile {
+            font-size: 60px;
+        }
+    }
+
+    &__link {
+        font-family: var(--Monopolix-Medium);
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 200%;
+        letter-spacing: 0.05em;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        margin-bottom: 45px;
+
+        @include mobile {
+            font-size: 20px;
+        }
+    }
+}

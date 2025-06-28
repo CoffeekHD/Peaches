@@ -1,0 +1,53 @@
+.trends {
+    background-image: url('../img/index/backgrounds/trends-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 690px;
+    color: var(--black-05);
+    text-transform: capitalize;
+
+    @include tablet {
+        background-position: 60%;
+    }
+
+    @include mobile {
+        background-position: 70%;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        height: 100%;
+    }
+
+    &__content-wrapper {
+        margin-bottom: 68px;
+    }
+
+    &__title {
+        font-family: var(--Monopolix-light);
+        font-weight: 400;
+        font-size: 64px;
+        line-height: 113%;
+        letter-spacing: 0.02em;
+
+        @include mobile {
+            font-size: 60px;
+        }
+    }
+
+    &__link {
+        font-family: var(--Monopolix-Medium);
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 200%;
+        letter-spacing: 0.05em;
+
+        @include mobile {
+            font-size: 20px;
+        }
+    }
+}

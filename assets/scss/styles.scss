@@ -1,0 +1,25 @@
+@import './base/fonts';
+@import './base/globals';
+@import './base/media';
+@import './base/mixins';
+@import './base/normalize';
+@import './base/utils';
+@import './base/variables';
+
+@import 'blocks/header.scss',
+        'blocks/menu',
+        'blocks/user-menu',
+        'blocks/_buttons.scss',
+        'blocks/sub-menu',
+        'blocks/hero',
+        'blocks/swiper',
+        'blocks/info',
+        'blocks/trends',
+        'blocks/best-sellers',
+        'blocks/colors',
+        'blocks/collections',
+        'blocks/categories',
+        'blocks/catalog',
+        'blocks/catalog-sidebar',
+        'blocks/catalog-card',
+        'blocks/footer'

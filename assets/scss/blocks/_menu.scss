@@ -1,0 +1,49 @@
+.menu {
+    display: flex;
+    column-gap: 24px;
+    flex-wrap: wrap;
+    padding-inline: 10px;
+
+    @include laptop {
+        position: fixed;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        row-gap: 24px;
+        height: 100%;
+        background-color: #fff;
+        left: 0;
+        padding: 60px 40px;
+        z-index: 7000;
+        transform: translateX(-300px);
+        transition: var(--transition);
+
+    }
+
+    &__item {
+        @include laptop {
+            position: relative;
+        }
+    }
+
+    &__link {
+        position: relative;
+        display: block;
+        font-size: 20px;
+        line-height: 143%;
+        letter-spacing: 0.05em;
+        color: var(--black-90);
+
+        @include laptop {
+            font-size: 16px;
+        }
+    }
+
+    &__sub-menu {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+.menu.active {
+    transform: translateX(0) ;
+}
